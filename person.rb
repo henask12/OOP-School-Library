@@ -1,10 +1,10 @@
-class Person 
+class Person < Nameable
   attr_reader :id
   attr_accessor :name, :age
 
   def initialize(name, age = 'Unknown', parent_permission: true)
     @id = generate_id
-    @name = name
+    @name = name.to_s
     @age = age
     @parent_permission = parent_permission
     @rentals = []

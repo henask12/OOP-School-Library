@@ -6,6 +6,7 @@ require_relative 'capitalize_decorator'
 class Person < Nameable
   attr_reader :id
   attr_accessor :name, :age
+  attr_reader :rentals
 
   def initialize(name, age = 'Unknown', parent_permission: true)
     @id = generate_id
@@ -24,7 +25,9 @@ class Person < Nameable
   end
 
   def add_rentals(book, date)
-    @rentals << Rental.new(date, book, self)
+    @rentals = Rental.new(date, book, self)
+    @rentals << rental
+    book.add_rental(rental)
   end
 
   private

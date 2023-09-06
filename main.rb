@@ -8,7 +8,7 @@ require_relative 'capitalize_decorator'
 require_relative 'trimmer_decorator'
 
 # Create a Person instance
-person = Person.new('maximilianus', 22)
+person = Person.new(22, 'maximilianus')
 
 # Test the Person's correct_name method
 puts "Person's Name: #{person.correct_name}" # Output: maximilianus

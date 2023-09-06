@@ -1,3 +1,8 @@
+require_relative 'decorator'
+require_relative 'nameable'
+require_relative 'trimmer_decorator'
+require_relative 'capitalize_decorator'
+
 class Person < Nameable
   attr_reader :id
   attr_accessor :name, :age

@@ -5,8 +5,7 @@ require_relative 'capitalize_decorator'
 
 class Person < Nameable
   attr_reader :id
-  attr_accessor :name, :age
-  attr_reader :rentals
+  attr_accessor :name, :age, :rentals
 
   def initialize(name, age = 'Unknown', parent_permission: true)
     @id = generate_id

@@ -61,10 +61,10 @@ class App
     classroom = Classroom.new(classroom_lable)
     case parent_permission
     when 'y'
-      student = Student.new(name, age, classroom, parent_permission: true)
+      student = Student.new(classroom, name, age , parent_permission: true)
       @persons << student
     when 'n'
-      student = Student.new(name, age, classroom, parent_permission: false)
+      student = Student.new(classroom, name, age, parent_permission: false)
       @persons << student
     end
     puts 'Student addeed successfully'

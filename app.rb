@@ -64,7 +64,7 @@ class App
       student = Student.new(classroom, name, age , parent_permission: true)
       @persons << student
     when 'n'
-      student = Student.new(classroom, name, age, parent_permission: false)
+      student = Student.new(name, age, classroom, parent_permission: false)
       @persons << student
     end
     puts 'Student addeed successfully'
